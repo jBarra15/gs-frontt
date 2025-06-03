@@ -9,10 +9,16 @@ body {
 }
 
 header {
-    background: #ffffff;
-    padding: 24px 0 12px 0;
-    text-align: center;
+  background-image: url('chuva.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0 40px 0;
+  color: #fff;
+  text-align: center;
+  border-radius: 0 0 32px 32px; /* opcional, só para dar um efeito */
+  box-shadow: 0 2px 24px #3335;
 }
+
 
 header h1 {
     font-size: 5rem;
@@ -21,15 +27,17 @@ header h1 {
 }
 
 nav a {
-    margin: 0 16px;
-    text-decoration: none;
-    color: #010407;
-    font-weight: 500;
-    transition: color 0.2s;
+    
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 1px 1px 8px #222; /* sombra pra melhorar em fundos claros */
+  margin: 0 8px;
+  text-decoration: none;
+  transition: color .2s;
 }
 
 nav a:hover {
-    color: #145494;
+    color: #ffffff;
 }
 
 main {
