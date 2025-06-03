@@ -1,0 +1,20 @@
+Projeto GS - Plataforma de Monitoramento e Alerta de Enchentes
+
+Sobre o Projeto
+Landing page desenvolvida para apresentar uma solução tecnológica de monitoramento e alerta de enchentes, integrando sensores, inteligência artificial e comunicação multicanal para proteção da população.
+
+Funcionalidades
+Monitoramento em tempo real com sensores IoT
+Previsão de riscos por inteligência artificial
+Alertas automáticos para autoridades e população
+Painel de controle com mapas interativos
+Canal de comunicação para emergências
+Conteúdo educativo e recomendações de segurança
+
+Como testar
+Abra o arquivo `index.html` no seu navegador.
+
+Nome:Joel Barra  
+RM:560796
+
+Repositório disponível em: [https://github.com/jBarra15/gs-frontt](https://github.com/jBarra15/gs-frontt)
