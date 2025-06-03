@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page da Solução</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>AquaSafe</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#problema">Problema</a>
+            <a href="#solucao">Solução</a>
+            <a href="#pitch">Pitch</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h2>Sobre o projeto</h2>
+            <p>O AquaSafe é uma iniciativa dedicada à mitigação dos impactos das enchentes no Brasil por meio do uso avançado de tecnologia e análise de dados. Nosso objetivo é aprimorar o monitoramento, a previsão e a comunicação de riscos hidrológicos, promovendo maior segurança e resiliência para cidades e comunidades vulneráveis. Integrando sistemas inteligentes de alerta, sensoriamento remoto e ferramentas digitais, o AquaSafe visa oferecer suporte à gestão pública e à população, contribuindo para a redução de danos humanos, sociais e econômicos decorrentes de desastres naturais.</p>
+        </section>
+
+        <section id="problema">
+            <h2>O Problema</h2>
+            <p>O Brasil sofre com enchentes recorrentes que afetam milhões de pessoas, causam mortes, prejuízos econômicos e interrupção de serviços essenciais. A falta de infraestrutura adequada, políticas públicas eficazes e sistemas eficientes de alerta agrava a vulnerabilidade das populações, especialmente em áreas de risco. Sem soluções inovadoras, esses desastres continuam causando grandes impactos sociais e econômicos no país.</p>
+            <img src="/output.png" alt="Grafico" class="img-grafico">
+        </section>
+
+        <section id="solucao">
+            <h2>A Solução</h2>
+            <p>Nossa solução consiste em uma plataforma digital inteligente para monitoramento e alerta de enchentes em áreas urbanas. Utilizando sensores de nível de água e análise de dados em tempo real, o sistema identifica situações de risco e envia alertas automáticos para a população e autoridades. Além disso, oferece mapas interativos, histórico de ocorrências e recomendações de segurança, auxiliando na prevenção de desastres e na resposta rápida em casos de emergência.</p>
+            <div id="slider-solucao"></div>
+            <img src="/aviso.png" alt="aviso" class="celular-aviso">
+        </section>
+
+        <section id="pitch">
+            <h2>Vídeo Pitch</h2>
+            <video controls width="320">
+                <source src="pitch.mp4" type="video/mp4">
+                Seu navegador não suporta o vídeo.
+            </video>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <form id="form-contato">
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="msg-form"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Nome: Joel Barra RM:560796 - Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
