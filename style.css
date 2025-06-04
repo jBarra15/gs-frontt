@@ -8,71 +8,130 @@ body {
     min-height: 100vh;
 }
 
-header {
-  background-image: url('chuva.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 60px 0 40px 0;
-  color: #ffffff;
-  text-align: center;
-  border-radius: 0 0 32px 32px; 
-  box-shadow: 0 2px 24px #3335;
+nav {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+nav a {
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 1px 1px 8px #222;
+    padding: 8px 18px;
+    border-radius: 22px;
+    background: rgba(20,36,60,0.25);
+    margin: 0 4px;
+    text-decoration: none;
+    transition: color .2s, background .2s;
+}
+nav a:hover {
+    color: #000;
+    background: #fff6;
 }
 
+header {
+    background-image: url('chuva.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0 40px 0;
+    color: #fff;
+    text-align: center;
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 2px 24px #3335;
+    position: relative;
+}
 
 header h1 {
-    font-size: 5rem;
-    margin-bottom: 0.5rem;
+    font-size: 3.2rem;
+    margin-bottom: 0.7rem;
     font-family: 'Montserrat', Arial, sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 16px #1116;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeZoomIn 1.2s cubic-bezier(.5,1.7,.56,.94) forwards;
 }
 
-nav a {
-    
-  color: #fff;
-  font-weight: 500;
-  text-shadow: 1px 1px 8px #222; 
-  margin: 0 8px;
-  text-decoration: none;
-  transition: color .2s;
-}
-
-nav a:hover {
-    color: #000000;
+@keyframes fadeZoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 main {
     padding: 32px 5vw;
+    max-width: 1200px;
+    margin: auto;
 }
-
 section {
     margin-bottom: 40px;
     background: #fff;
-    padding: 24px 20px;
-    border-radius: 12px;
-    box-shadow: 0 1px 4px #0002;
+    padding: 28px 28px 22px 28px;
+    border-radius: 18px;
+    box-shadow: 0 1px 8px #0002;
+    transition: box-shadow 0.2s;
 }
-
+section:hover {
+    box-shadow: 0 4px 22px #25317e2b;
+}
 h2 {
     margin-bottom: 18px;
-    font-size: 2.5rem;
-    color: #050505;
+    font-size: 2.1rem;
+    color: #2551a5;
+    letter-spacing: 1px;
 }
 
- .img-grafico {
-    max-width: 500px; 
-    width: 100%;      
-    height: auto;     
+.cards-funcionalidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+.card {
+    background: #f3f8fe;
+    border-radius: 16px;
+    padding: 20px 18px 18px 18px;
+    flex: 1 1 230px;
+    min-width: 210px;
+    max-width: 320px;
+    box-shadow: 0 1px 6px #1976d23a;
+    transition: transform 0.22s, box-shadow 0.22s, background 0.22s;
+    margin-bottom: 12px;
+    text-align: center;
+}
+.card:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 0 12px 32px #1a2e5040;
+    background: #e2eafc;
+    cursor: pointer;
+}
+.card i {
+    font-size: 2rem;
+    color: #1976d2;
+    margin-bottom: 10px;
     display: block;
-    margin: 20px auto; 
 }
 
-
-.celular-aviso{
-    max-width: 500px; 
-    width: 100%;      
-    height: auto;     
+.img-grafico, .celular-aviso {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
     display: block;
-    margin: 20px auto; 
+    margin: 20px auto;
     border-radius: 20px;
 }
 
@@ -80,16 +139,15 @@ form {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-width: 400px;
+    max-width: 420px;
+    margin: auto;
 }
-
 input, textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
 }
-
 button {
     background: #1976d2;
     color: #fff;
@@ -100,7 +158,6 @@ button {
     cursor: pointer;
     transition: background 0.2s;
 }
-
 button:hover {
     background: #145494;
 }
@@ -111,16 +168,37 @@ footer {
     background: #222;
     color: #eee;
     margin-top: 32px;
+    border-radius: 20px 20px 0 0;
+}
+
+@media (max-width: 900px) {
+    .cards-funcionalidades {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    main {
+        padding: 12px 2vw;
+    }
+    header h1 {
+        font-size: 2.1rem;
+    }
 }
 
 @media (max-width: 600px) {
     main {
-        padding: 18px 2vw;
+        padding: 4px 0;
+    }
+    section {
+        padding: 14px 4px 10px 4px;
+        border-radius: 10px;
     }
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+    .img-grafico, .celular-aviso {
+        max-width: 95vw;
     }
 }
